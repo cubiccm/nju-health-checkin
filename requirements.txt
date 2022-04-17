@@ -1,3 +1,5 @@
 requests
 beautifulsoup4
 pycryptodome
+opencv_python
+tensorflow

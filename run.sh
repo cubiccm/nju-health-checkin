@@ -15,4 +15,4 @@ fi
 
 # for telegram message
 
-curl "https://api.telegram.org/bot${bottoken}/sendMessage?chat_id=${tgid}&text=${RESULT}"
+curl "https://api.telegram.org/bot${bottoken}/sendMessage?chat_id=${tgid}&parse_mode=HTML&disable_notification=true&text=${RESULT}"

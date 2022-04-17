@@ -8,11 +8,17 @@
 python3 -m pip install -r requirements.txt
 ```
 
+## Github Actions
+
+1. Set `NJU_USER` and `NJU_PASS` in settings/secrets.
+
+2. (Optional) Set `TELEGRAM_TOKEN` and `TELEGRAM_TO` secrets. [(appleboy/telegram-action)](https://github.com/appleboy/telegram-action#secrets)
+
+- The job will be automatically executed at 9:00 am UTC+8 (may be delayed up to 1 hour due to GitHub's issues with cron actions).
+
 ## Run with Crontab
 
 This script provides features of sending checkin info using telegram-bot, and manually specifying fake location. You can feel free to use all of these two features or neither of them.
-
-*Github action is not stable and will not be used in this fork any more.*
 
 `crontab -e` and write:
 
