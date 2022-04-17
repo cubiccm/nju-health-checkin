@@ -1,5 +1,9 @@
-requests
-beautifulsoup4
-pycryptodome
 opencv_python
 tensorflow
+requests
+pytz
+beautifulsoup4
+numpy
+Pillow
+pycryptodome
+PyYAML

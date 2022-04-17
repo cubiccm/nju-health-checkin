@@ -83,7 +83,7 @@ def main():
   from pytz import timezone    
   from datetime import datetime
   
-  time_str = datetime.now(timezone("Asia/Hong_Kong")).strftime("%Y-%m-%d %H-%M-%S")
+  time_str = datetime.now(timezone("Asia/Hong_Kong")).strftime("%Y-%m-%d %H:%M:%S")
 
   # get info
   raw = session.get(url_list)
@@ -118,7 +118,7 @@ def main():
   response = """
 <b>✅ Health Check-in Success</b>
 Location: {location}
-Checkin time: {time}
+Checkin time: {time} CST
 Response: {answer}
   """.format(
     location = data["CURR_LOCATION"],
