@@ -4,15 +4,15 @@ set -e
 
 shell_dir=$(dirname $(readlink -f "$0"))
 
-RESULT=$(TO_HTML=1 python3 $shell_dir/checkin.py)
+RESULT=$(python3 $shell_dir/checkin.py)
 
 echo "$RESULT"
 
-if [[ -z $bottoken || -z $tgid ]]; then
+if [[ -z $TELEGRAM_TOKEN || -z $TELEGRAM_TO ]]; then
     echo "no tgid or bot token"
     exit
 fi
 
 # for telegram message
 
-curl "https://api.telegram.org/bot${bottoken}/sendMessage?chat_id=${tgid}&parse_mode=HTML&disable_notification=true&text=${RESULT}"
+curl "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${TELEGRAM_TO}&parse_mode=HTML&disable_notification=true&text=${RESULT}"
