@@ -93,7 +93,6 @@ def main():
   data = next(x for x in content["data"] if x.get("TJSJ") != "")
 
   data["WID"] = content["data"][0]["WID"]
-  data["ZJHSJCSJ"] = "2022"
   fields = [
     "WID",
     "CURR_LOCATION",
